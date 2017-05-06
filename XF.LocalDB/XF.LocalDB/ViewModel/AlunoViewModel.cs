@@ -13,10 +13,12 @@ namespace XF.LocalDB.ViewModel
         public AlunoViewModel()
         {
             OnAdicionar = new AdicionarAluno(this);
+            OnSalvarAluno = new SalvarAluno(this);
         }
 
         #region Propriedades
         public AdicionarAluno OnAdicionar { get; }
+        public SalvarAluno OnSalvarAluno { get; }
         public Aluno Selecionado { get; set; }
         public string RM { get; set; }
         public string Nome { get; set; }
@@ -34,6 +36,21 @@ namespace XF.LocalDB.ViewModel
         public void OnNovo()
         {
             App.Current.MainPage.Navigation.PushAsync(new View.Aluno.NovoView());
+        }
+
+        public void OnSalvar()
+        {
+            Aluno aluno = new Aluno()
+            {
+                Nome = txtNome.Text,
+                RM = txtRM.Text,
+                Email = txtEmail.Text,
+                Aprovado = IsAprovado.IsToggled,
+                Id = alunoId
+            };
+            Limpar();
+            App.AlunoModel.SalvarAluno(aluno);
+            App.Current.MainPage.Navigation.PopAsync();
         }
 
     }
@@ -55,6 +72,27 @@ namespace XF.LocalDB.ViewModel
         public void Execute(object parameter)
         {
             vmAluno.OnNovo();
+        }
+    }
+
+    public class SalvarAluno : ICommand
+    {
+        private AlunoViewModel vmAluno;
+        public SalvarAluno(AlunoViewModel paramVM)
+        {
+            vmAluno = paramVM;
+        }
+
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            vmAluno.OnSalvar();
         }
     }
 
