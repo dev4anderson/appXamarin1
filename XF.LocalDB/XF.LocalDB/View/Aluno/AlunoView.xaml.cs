@@ -25,15 +25,10 @@ namespace XF.LocalDB.View.Aluno
             base.OnAppearing();
         }
 
-        private void OnNovo(object sender, EventArgs args)
-        {
-            Navigation.PushAsync(new NovoView());
-        }
-
         private void OnAlunoTapped(object sender, ItemTappedEventArgs args)
         {
-            var selecionado = args.Item as XF.LocalDB.Model.Aluno;
-            Navigation.PushAsync(new NovoView(selecionado.Id));
+            vmAluno.Selecionado = args.Item as XF.LocalDB.Model.Aluno;
+            Navigation.PushAsync(new NovoView(vmAluno.Selecionado.Id));
         }
 
         private async void OnDelete(object sender, EventArgs e)

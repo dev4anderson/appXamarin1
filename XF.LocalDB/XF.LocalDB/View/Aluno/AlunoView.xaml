@@ -27,7 +27,7 @@
         <StackLayout Padding="20">
             <StackLayout Orientation="Horizontal"
                    VerticalOptions="Center" HorizontalOptions="Center">
-                <Button x:Name="btnNovo" Text="Novo" Clicked="OnNovo" Style="{StaticResource ButtonNew}" />
+                <Button x:Name="btnNovo" Text="Novo" Command="{ Binding OnAdicionar }" Style="{StaticResource ButtonNew}" />
             </StackLayout>
             <Label Text="Lista de Alunos"  Style="{StaticResource LabelTitle}" />
             <ListView x:Name="lstAlunos" 
