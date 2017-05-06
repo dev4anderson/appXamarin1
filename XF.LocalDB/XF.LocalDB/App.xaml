@@ -2,9 +2,26 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF.LocalDB.App">
-	<Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#80deea"/>
+                <Setter Property="BarTextColor" Value="Black"/>
+            </Style>
 
-		<!-- Application resource dictionary -->
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
 
-	</Application.Resources>
+            <Style x:Key="ButtonNew" TargetType="Button" BasedOn="{StaticResource Button}">
+                <Setter Property="BackgroundColor" Value="Teal" />
+            </Style>
+
+            <Style x:Key="ButtonCancel" TargetType="Button" BasedOn="{StaticResource Button}">
+                <Setter Property="BackgroundColor" Value="Red" />
+            </Style>
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>

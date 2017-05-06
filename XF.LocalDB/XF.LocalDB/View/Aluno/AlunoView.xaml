@@ -3,14 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF.LocalDB.View.Aluno.AlunoView"
              Title="Alunos">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelTitle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="24" />
+            </Style>
 
+            <Style x:Key="NomeAluno" TargetType="Label">
+                <Setter Property="TextColor" Value="#004d40" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style x:Key="EmailAluno" TargetType="Label">
+                <Setter Property="TextColor" Value="#6200ea" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <StackLayout Padding="20">
             <StackLayout Orientation="Horizontal"
                    VerticalOptions="Center" HorizontalOptions="Center">
-                <Button x:Name="btnNovo" Text="Novo" Clicked="OnNovo" />
+                <Button x:Name="btnNovo" Text="Novo" Clicked="OnNovo" Style="{StaticResource ButtonNew}" />
             </StackLayout>
-            <Label Text="Alunos" Font="18" />
+            <Label Text="Lista de Alunos"  Style="{StaticResource LabelTitle}" />
             <ListView x:Name="lstAlunos" 
                 ItemsSource="{Binding Alunos}" ItemTapped="OnAlunoTapped">
                 <ListView.ItemTemplate>
@@ -20,8 +39,8 @@
                                 <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Apagar" IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <StackLayout Padding="5,0,5,0">
-                                <Label Text="{Binding Nome}" Font="14" />
-                                <Label Text="{Binding Email}" Font="10" />
+                                <Label Text="{Binding Nome}" Style="{StaticResource NomeAluno}" />
+                                <Label Text="{Binding Email}" Style="{StaticResource EmailAluno}" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -29,5 +48,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

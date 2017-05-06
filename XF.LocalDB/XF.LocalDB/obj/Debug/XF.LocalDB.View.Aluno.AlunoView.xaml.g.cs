@@ -11,7 +11,7 @@
 namespace XF.LocalDB.View.Aluno {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.Loca" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.Loca" +
         "lDB\\XF.LocalDB\\View\\Aluno\\AlunoView.xaml")]
     public partial class AlunoView : global::Xamarin.Forms.ContentPage {
         

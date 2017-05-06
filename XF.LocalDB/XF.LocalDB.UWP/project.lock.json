@@ -23606,16 +23606,16 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\XF.LocalDB.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\XF.LocalDB.UWP.csproj",
       "projectName": "XF.LocalDB.UWP",
-      "projectPath": "c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\XF.LocalDB.UWP.csproj",
-      "projectJsonPath": "c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\project.json",
+      "projectPath": "C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\XF.LocalDB.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.csproj": {
-              "projectPath": "c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.csproj"
+            "C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.csproj": {
+              "projectPath": "C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB\\XF.LocalDB.csproj"
             }
           }
         }

@@ -14,8 +14,8 @@
                 <Switch x:Name="IsAprovado" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="btnSalvar" Text="Salvar" Clicked="OnSalvar" />
-                <Button x:Name="btnCancelar" Text="Cancelar" Clicked="OnCancelar" />
+                <Button x:Name="btnSalvar" Text="Salvar" Clicked="OnSalvar" Style="{StaticResource ButtonNew}" />
+                <Button x:Name="btnCancelar" Text="Cancelar" Clicked="OnCancelar" Style="{StaticResource ButtonCancel}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

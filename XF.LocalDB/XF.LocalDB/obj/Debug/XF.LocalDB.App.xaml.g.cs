@@ -11,7 +11,7 @@
 namespace XF.LocalDB {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\ndsan\\onedrive\\documentos\\visual studio 2017\\Projects\\XF.LocalDB\\XF.Loca" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\ndsan\\OneDrive\\Documentos\\Visual Studio 2017\\Projects\\XF.LocalDB\\XF.Loca" +
         "lDB\\XF.LocalDB\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
