@@ -49,8 +49,9 @@ namespace XF.LocalDB.Model
         {
             lock (locker)
             {
-                return (from c in database.Table<Aluno>()
-                        select c).ToList();
+                return database.Table<Aluno>().OrderBy(c => c.Nome);
+                //return (from c in database.Table<Aluno>()
+                //        select c).ToList();
             }
         }
 
