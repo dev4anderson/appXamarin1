@@ -21,9 +21,7 @@ namespace XF.LocalDB.View.Aluno
 
         protected override void OnAppearing()
         {
-            vmAluno = new AlunoViewModel();
-            BindingContext = vmAluno;
-
+            refresh();
             base.OnAppearing();
         }
 
@@ -36,7 +34,25 @@ namespace XF.LocalDB.View.Aluno
         {
             var selecionado = args.Item as XF.LocalDB.Model.Aluno;
             Navigation.PushAsync(new NovoView(selecionado.Id));
-            //DisplayAlert("Aluno selecionado", "Aluno: " + selecionado.Id, "OK");
+        }
+
+        private async void OnDelete(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+
+            var aluno = (mi.CommandParameter as XF.LocalDB.Model.Aluno);
+
+            var resposta = await DisplayAlert("Atenção", "Tenha certeza que deseja excluir esse Aluno?", "Sim", "Não");
+            if (resposta){
+                App.AlunoModel.RemoverAluno(aluno.Id);
+                refresh();
+            }
+        }
+
+        private void refresh()
+        {
+            vmAluno = new AlunoViewModel();
+            BindingContext = vmAluno;
         }
     }
 }
